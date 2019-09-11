@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title></title>
+    <script>
+    function changeImg(){
+    var a = Math.floor((Math.random()*10)+1);
+    var b = Math.floor((Math.random()*10)+1);
+    while (a >=7){
+        var a = Math.floor((Math.random()*10)+1);
+    }
+    while(b >=7){
+       var b = Math.floor((Math.random()*10)+1);
+    }
+    
+    if (a==1){
+        var img1 = document.getElementById("img1");
+        img1.src="dice1.png";
+    }
+    if (a==2){
+        var img1 = document.getElementById("img1");
+        img1.src="dice2.png";
+    }
+    if (a==3){
+        var img1 = document.getElementById("img1");
+        img1.src="dice3.png";
+    }
+    if (a==4){
+        var img1 = document.getElementById("img1");
+        img1.src="dice4.png";
+    }
+    if (a==5){
+        var img1 = document.getElementById("img1");
+        img1.src="dice5.png";
+    }
+    if (a==6){
+        var img1 = document.getElementById("img1");
+        img1.src="dice6.png";
+    }
+    
+
+    if (b==1){
+        var img2 = document.getElementById("img2");
+        img2.src="dice1.png";
+    }
+    if (b==2){
+        var img2 = document.getElementById("img2");
+        img2.src="dice2.png";
+    }
+    if (b==3){
+        var img2 = document.getElementById("img2");
+        img2.src="dice3.png";
+    }
+    if (b==4){
+        var img2 = document.getElementById("img2");
+        img2.src="dice4.png";
+    }
+    if (b==5){
+        var img2 = document.getElementById("img2");
+        img2.src="dice5.png";
+    }
+    if (b==6){
+        var img2 = document.getElementById("img2");
+        img2.src="dice6.png";
+    }
+    
+    
+    if (a<b){
+        document.getElementById("text1").innerHTML='플레이어 2가 이겼습니다!';
+    }
+    if (a>b){
+        document.getElementById("text1").innerHTML='플레이어 1이 이겼습니다!';
+        }
+    if (a==b){
+        document.getElementById("text1").innerHTML='플레이어 1,2가 비겼습니다!';
+    }
+    }
+    </script>
+</head>
+<body>
+    <h1>Player1</h1>
+    <img src = "dice1.png" id="img1">
+    <h1>player2</h1>
+    <br><img src = "dice1.png" id="img2"></br>
+    <input type="button" value="Play Game" onclick="changeImg()">
+    <h1 id = "text1">게임 결과</h1>
+    
+
+</body>
+</html>
